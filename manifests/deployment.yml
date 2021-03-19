@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "sanrocksstandingserviceakscluster-9b0f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "sanrocksstandingserviceakscluster-9b0f"
+  template:
+    metadata:
+      labels:
+        app: "sanrocksstandingserviceakscluster-9b0f"
+    spec:
+      containers:
+        - name: "sanrocksstandingserviceakscluster-9b0f"
+          image: "standingserviceacr.azurecr.io/sanrocksstandingserviceakscluster"
+          ports:
+          - containerPort: 1000
