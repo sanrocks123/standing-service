@@ -38,7 +38,6 @@ stages:
         gradleWrapperFile: 'gradlew'
         tasks: 'build'
         publishJUnitResults: false
-        codeCoverageToolOption: 'Cobertura'
         javaHomeOption: 'JDKVersion'
         sonarQubeRunAnalysis: false
         checkStyleRunAnalysis: true
