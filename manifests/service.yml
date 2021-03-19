@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "sanrocksstandingserviceakscluster-9b0f"
+    labels:
+        app: "sanrocksstandingserviceakscluster-9b0f"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 1000
+      targetPort: 1000
+      protocol: TCP
+      name: http
+    selector:
+        app: "sanrocksstandingserviceakscluster-9b0f"
