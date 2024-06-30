@@ -1,73 +1,39 @@
-/**
-*	Description	: Gradle build file 
-*	Author		: Sanjeev
-*/
 
-buildscript{
-	repositories{
-        jcenter()
-        mavenCentral()
-    }
-    
+plugins {
+    id("non-reactive-conventions")
+    id("java-spotless-conventions")
+    id("open-api-conventions")
 }
 
-apply plugin : 'application'
-apply plugin : 'eclipse'
-
-mainClassName = 'fbl.standing.main.StandingServiceSelfHostApp'
-version = '1.0'
+apply plugin: 'application'
 
 repositories {
-		mavenCentral()    
-	}
+    mavenCentral()
+}
 
-sourceCompatibility=1.8
-targetCompatibility=1.8
-
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'Standing Service',
-                   'Implementation-Version': version
-    }
+application {
+    mainClassName = 'fbl.standing.StandingServiceSelfHostApp'
+    version = '1.0'
 }
 
 dependencies {
+}
 
-	compile "org.springframework.boot:spring-boot-starter-web:1.5.8.RELEASE"
-   	compile "org.json:json:20171018"
-	   	
-   	compile "com.fasterxml.jackson.core:jackson-databind:2.9.3"
-	compile "com.fasterxml.jackson.core:jackson-annotations:2.9.3"
-	compile "com.fasterxml.jackson.core:jackson-core:2.9.3"
-	
-   	compile "io.springfox:springfox-swagger2:2.9.2"
-	compile "io.springfox:springfox-swagger-ui:2.9.2"
-	compile "org.webjars:jquery:2.2.4"
-	
-	compile "org.springframework.ws:spring-ws-core:2.4.2.RELEASE"
-	compile "org.springframework:spring-oxm:3.0.4.RELEASE"
-	
-	compile "org.springframework.kafka:spring-kafka:1.0.2.RELEASE"
-			   	
-   	testCompile "junit:junit:4.12"
-   	testCompile "org.jmockit:jmockit:1.9"
-   	testCompile"org.springframework.boot:spring-boot-starter-test:1.5.8.RELEASE"
-	
-	}
-
-
+/**
 task copyToLib(type: Copy) {
-    	from configurations.runtime
-    	into "$buildDir/lib"    
-	}
+    from configurations.runtime
+    into "$buildDir/lib"
+}
 task copyJar(type: Copy) {
-    	from "$buildDir/libs"
-    	into "$buildDir/lib"    
-	}
+    from "$buildDir/libs"
+    into "$buildDir/lib"
+}
 
 task copyDockerFile(type: Copy) {
-    	from "./Dockerfile"
-    	into "$buildDir"
-   }
+    from "./Dockerfile"
+    into "$buildDir"
+}
 
 build.dependsOn(copyToLib, copyDockerFile, copyJar)
+
+ */

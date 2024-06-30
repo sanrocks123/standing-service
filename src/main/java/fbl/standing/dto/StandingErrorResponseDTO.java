@@ -1,7 +1,6 @@
 package fbl.standing.dto;
 
 import java.io.Serializable;
-
 import org.springframework.http.HttpStatus;
 
 /**
@@ -9,9 +8,7 @@ import org.springframework.http.HttpStatus;
  *
  * @author sanjeevkumar.saxena
  * @since 1.0
- *
  */
-
 public class StandingErrorResponseDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,35 +47,30 @@ public class StandingErrorResponseDTO implements Serializable {
     }
 
     /**
-     * @param errorCode
-     *            the errorCode to set
+     * @param errorCode the errorCode to set
      */
     public void setErrorCode(final String errorCode) {
         this.errorCode = errorCode;
     }
 
     /**
-     * @param errorMessage
-     *            the errorMessage to set
+     * @param errorMessage the errorMessage to set
      */
     public void setErrorMessage(final String errorMessage) {
         this.errorMessage = errorMessage;
     }
 
     /**
-     * @param remedy
-     *            the remedy to set
+     * @param remedy the remedy to set
      */
     public void setRemedy(final String remedy) {
         this.remedy = remedy;
     }
 
     /**
-     * @param status
-     *            the status to set
+     * @param status the status to set
      */
     public void setStatus(final HttpStatus status) {
         this.status = status;
     }
-
 }

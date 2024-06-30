@@ -8,15 +8,12 @@ import fbl.standing.dto.StandingPositionResponseDTO;
  *
  * @author sanjeevkumar.saxena
  * @since 1.0
- *
  */
-
 public interface StandingPositionService {
 
-	/**
-	 * @param request
-	 * @return
-	 */
-	StandingPositionResponseDTO findPosition(StandingPositionRequestDTO request);
-
+    /**
+     * @param request
+     * @return
+     */
+    StandingPositionResponseDTO findPosition(StandingPositionRequestDTO request);
 }

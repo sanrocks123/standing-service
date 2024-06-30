@@ -1,0 +1,15 @@
+#
+# Description	: Standing service properties
+# Author		: Sanjeev
+#
+
+server:
+  port: 1002
+  servlet:
+    contextPath: "/standing-service"
+
+spring:
+  application:
+    name: standing-service
+  profiles:
+    active: "${ENV:dev}"

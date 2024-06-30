@@ -9,19 +9,15 @@ import org.springframework.web.client.RestTemplate;
  *
  * @author sanjeevkumar.saxena
  * @since 1.0
- *
  */
-
 @Configuration
 public class StandingAppConfig {
 
-	/**
-	 * 
-	 * @return
-	 */
-	@Bean
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
-
+    /**
+     * @return
+     */
+    @Bean
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
 }
